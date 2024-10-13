@@ -9,25 +9,25 @@ if 1000 <= numero < 10000:
     sexo = numero % 10
 
     if estado_civil == 1:
-        estado_civil_str = "Soltero"
+        estado_civil_resultado = "Soltero"
     elif estado_civil == 2:
-        estado_civil_str = "Casado"
+        estado_civil_resultado = "Casado"
     elif estado_civil == 3:
-        estado_civil_str = "Divorciado"
+        estado_civil_resultado = "Divorciado"
     elif estado_civil == 4:
-        estado_civil_str = "Viudo"
+        estado_civil_resultado = "Viudo"
     else:
-        estado_civil_str = "Estado civil no válido"
+        estado_civil_resultado = "Estado civil no válido"
 
     if sexo == 1:
-        sexo_str = "Masculino"
+        sexo_resultado = "Masculino"
     elif sexo == 2:
-        sexo_str = "Femenino"
+        sexo_resultado = "Femenino"
     else:
-        sexo_str = "Sexo no válido"
+        sexo_resultado = "Sexo no válido"
 
-    print(f"Estado civil: {estado_civil_str}")
-    print(f"Edad: {edad}")
-    print(f"Sexo: {sexo_str}")
+    print("Estado civil:", estado_civil_resultado)
+    print("Edad:", edad)
+    print("Sexo:", sexo_resultado)
 else:
     print("El número debe ser un entero positivo de cuatro cifras.")
