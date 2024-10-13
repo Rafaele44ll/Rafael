@@ -1,11 +1,13 @@
+import os
+os.system("cls")
+
 def suma_cifras(numero):
-    # Calcular la suma de las cifras
+
     return sum(int(digito) for digito in str(numero))
 
 try:
     numero = int(input("Ingrese un número entero de 4 cifras: "))
     
-    # Validaciones sin usar if
     (1000 <= numero < 10000) or (_ for _ in ()).throw(ValueError("El número debe tener 4 cifras."))
     
     resultado = suma_cifras(numero)

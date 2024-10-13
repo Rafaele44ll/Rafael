@@ -1,12 +1,13 @@
+import os
+os.system("cls")
+
 def calcular_sueldo(num_horas, tarifa_horaria):
-    # Cálculo del sueldo básico
+    
     sueldo_basico = num_horas * tarifa_horaria
     
-    # Cálculo de la bonificación del 20%
     bonificacion = sueldo_basico * 0.20
     sueldo_bruto = sueldo_basico + bonificacion
     
-    # Cálculo del descuento del 10%
     descuento = sueldo_bruto * 0.10
     sueldo_neto = sueldo_bruto - descuento
     

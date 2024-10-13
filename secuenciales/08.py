@@ -1,13 +1,11 @@
 import math
 
 def calcular_area_cilindro(radio, altura):
-    # Cálculo del área base
+
     area_base = math.pi * (radio ** 2)
     
-    # Cálculo del área lateral
     area_lateral = 2 * math.pi * radio * altura
     
-    # Cálculo del área total
     area_total = 2 * area_base + area_lateral
     
     return area_base, area_lateral, area_total

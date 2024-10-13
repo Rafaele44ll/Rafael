@@ -1,11 +1,12 @@
+import os
+os.system("cls")
+
 def calcular_capital_y_porcentajes(juan, rosa, daniel):
-    # Conversión de soles a dólares
+
     daniel_en_dolares = daniel / 3.00
     
-    # Capital total en dólares
     capital_total = juan + rosa + daniel_en_dolares
     
-    # Cálculo de los porcentajes de cada uno
     porcentaje_juan = (juan / capital_total) * 100
     porcentaje_rosa = (rosa / capital_total) * 100
     porcentaje_daniel = (daniel_en_dolares / capital_total) * 100
@@ -17,7 +18,6 @@ try:
     rosa = float(input("Ingrese el aporte de Rosa en dólares: "))
     daniel = float(input("Ingrese el aporte de Daniel en soles: "))
     
-    # Validaciones sin usar if
     (juan < 0) and (_ for _ in ()).throw(ValueError("El aporte de Juan no puede ser negativo."))
     (rosa < 0) and (_ for _ in ()).throw(ValueError("El aporte de Rosa no puede ser negativo."))
     (daniel < 0) and (_ for _ in ()).throw(ValueError("El aporte de Daniel no puede ser negativo."))

@@ -1,9 +1,10 @@
+import os
+os.system("cls")
+
 def intercambiar_cifras(num1, num2):
-    # Convertir los números a cadenas para manipular las cifras
     str_num1 = str(num1)
     str_num2 = str(num2)
     
-    # Intercambiar la primera y la tercera cifra
     nuevo_num1 = str_num2[0] + str_num1[1] + str_num2[2]
     nuevo_num2 = str_num1[0] + str_num2[1] + str_num1[2]
     
@@ -13,7 +14,6 @@ try:
     num1 = int(input("Ingrese el primer número de 3 cifras: "))
     num2 = int(input("Ingrese el segundo número de 3 cifras: "))
     
-    # Validaciones sin usar if
     (100 <= num1 < 1000) or (_ for _ in ()).throw(ValueError("El primer número debe tener 3 cifras."))
     (100 <= num2 < 1000) or (_ for _ in ()).throw(ValueError("El segundo número debe tener 3 cifras."))
     

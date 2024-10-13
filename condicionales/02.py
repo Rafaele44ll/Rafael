@@ -1,3 +1,6 @@
+import os
+os.system("cls")
+
 def clasificar_angulo(angulo):
     
     if angulo == 0:

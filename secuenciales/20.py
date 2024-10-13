@@ -1,5 +1,7 @@
+import os
+os.system("cls")
+
 def descomponer_dinero(cantidad):
-    # Billetes y monedas disponibles
     billetes_y_monedas = {
         200: 0,
         100: 0,
@@ -11,20 +13,17 @@ def descomponer_dinero(cantidad):
         1: 0
     }
     
-    # Descomposición
     for billete in billetes_y_monedas.keys():
         billetes_y_monedas[billete], cantidad = divmod(cantidad, billete)
     
     return billetes_y_monedas
 
 def validar_cantidad(cantidad):
-    # Lanzar excepción si la cantidad es negativa
     (cantidad < 0) and (_ for _ in ()).throw(ValueError("La cantidad de dinero no puede ser negativa."))
 
 try:
     cantidad = float(input("Ingrese la cantidad de dinero en soles: "))
     
-    # Validar sin usar if
     validar_cantidad(cantidad)
 
     resultado = descomponer_dinero(cantidad)

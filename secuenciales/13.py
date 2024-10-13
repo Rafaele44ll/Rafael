@@ -1,14 +1,12 @@
 import math
 
 def calcular_hipotenusa(cateto_a, cateto_b):
-    # Calcular la hipotenusa usando el teorema de Pitágoras
     return math.sqrt(cateto_a**2 + cateto_b**2)
 
 try:
     cateto_a = float(input("Ingrese la longitud del primer cateto: "))
     cateto_b = float(input("Ingrese la longitud del segundo cateto: "))
     
-    # Validaciones sin usar if
     (cateto_a < 0) and (_ for _ in ()).throw(ValueError("La longitud del cateto A no puede ser negativa."))
     (cateto_b < 0) and (_ for _ in ()).throw(ValueError("La longitud del cateto B no puede ser negativa."))
     

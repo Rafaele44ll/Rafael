@@ -1,3 +1,6 @@
+import os
+os.system("cls")
+
 def calcular_total(cantidad):
     if 1 <= cantidad <= 25:
         precio_unitario = 27
