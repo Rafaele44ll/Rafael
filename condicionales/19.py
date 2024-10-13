@@ -1,23 +1,21 @@
 import os
 os.system("cls")
 
-sexo = input("Ingrese el sexo del postulante (F/M): ").upper()
+sexo = input("Ingrese el sexo del postulante (F/M): ")
 
 edad = int(input("Ingrese la edad del postulante: "))
 
-categoria = ""
-
 if sexo == "F":
     if edad < 23:
-        categoria = "FA"  
+        categoria = "FA"
     else:
-        categoria = "FB"  
+        categoria = "FB"
 elif sexo == "M":
     if edad < 25:
-        categoria = "MA"  
+        categoria = "MA"
     else:
-        categoria = "MB"  
+        categoria = "MB"
 else:
-    categoria = "Sexo no válido"
+    categoria = "Inválido"
 
-print(f"La categoría del postulante es: {categoria}")
+print("Categoría:", categoria)
