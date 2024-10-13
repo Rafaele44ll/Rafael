@@ -1,37 +1,3 @@
 import os
 os.system("cls")
 
-def calcular_sueldo(monto_vendido):
-    sueldo_basico = 500
-    comision_porcentaje = 0.09
-    descuento_porcentaje = 0.11
-
-    
-    comision = monto_vendido * comision_porcentaje
-    
-    sueldo_bruto = sueldo_basico + comision
-
-    descuento = sueldo_bruto * descuento_porcentaje
-
-    sueldo_neto = sueldo_bruto - descuento
-
-    return comision, sueldo_bruto, descuento, sueldo_neto
-
-
-def validar_monto(monto_vendido):
-    if monto_vendido < 0:
-        raise ValueError("El monto vendido no puede ser negativo.")
-
-
-try:
-    monto_vendido = float(input("Ingrese el monto total vendido: "))
-    validar_monto(monto_vendido)
-
-    comision, sueldo_bruto, descuento, sueldo_neto = calcular_sueldo(monto_vendido)
-
-    print(f"Comisión: S/. {comision:.2f}")
-    print(f"Sueldo Bruto: S/. {sueldo_bruto:.2f}")
-    print(f"Descuento: S/. {descuento:.2f}")
-    print(f"Sueldo Neto: S/. {sueldo_neto:.2f}")
-except ValueError as e:
-    print(f"Entrada no válida: {e}")

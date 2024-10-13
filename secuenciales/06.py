@@ -10,7 +10,7 @@ def calcular_area_y_volumen(radio, altura):
 def obtener_valor(mensaje):
     while True:
         try:
-            valor = float(input(mensaje))
+            valor = int (input(mensaje))
             valor = valor * (valor >= 0)  
             return valor
         except ValueError:

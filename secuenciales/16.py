@@ -14,10 +14,9 @@ def calcular_sueldo(num_horas, tarifa_horaria):
     return sueldo_basico, sueldo_bruto, sueldo_neto
 
 try:
-    num_horas = float(input("Ingrese el número total de horas trabajadas: "))
-    tarifa_horaria = float(input("Ingrese la tarifa horaria: "))
+    num_horas = int ( input("Ingrese el número total de horas trabajadas: "))
+    tarifa_horaria = int ( input("Ingrese la tarifa horaria: "))
     
-    # Validaciones sin usar if
     (num_horas < 0) and (_ for _ in ()).throw(ValueError("El número de horas no puede ser negativo."))
     (tarifa_horaria < 0) and (_ for _ in ()).throw(ValueError("La tarifa horaria no puede ser negativa."))
     

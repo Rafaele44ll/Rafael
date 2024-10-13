@@ -18,8 +18,8 @@ def metros_a_yardas(metros):
 
 try:
     kilometros = float(input("Ingrese la longitud del primer tramo en kilómetros: "))
-    pies = float(input("Ingrese la longitud del segundo tramo en pies: "))
-    millas = float(input("Ingrese la longitud del tercer tramo en millas: "))
+    pies = int (input("Ingrese la longitud del segundo tramo en pies: "))
+    millas = int (input("Ingrese la longitud del tercer tramo en millas: "))
     
     total_metros = convertir_a_metros(kilometros, pies, millas)
     
