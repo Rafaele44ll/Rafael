@@ -1,25 +1,24 @@
 import os
 os.system("cls")
 
-def formar_mayor_numero(num):
-    digitos = [int(d) for d in str(num)]
+def convertir_disco_duro(capacidad_gb):
+    capacidad_mb = capacidad_gb * 1024
+    capacidad_kb = capacidad_mb * 1024
+    capacidad_bytes = capacidad_kb * 1024
     
-    cifra_mayor = max(digitos)
-    cifra_menor = min(digitos)
-    
-    numero1 = cifra_mayor * 10 + cifra_menor  
-    numero2 = cifra_menor * 10 + cifra_mayor  
-    
-    return numero1, numero2
+    return capacidad_mb, capacidad_kb, capacidad_bytes
 
 try:
-    numero = int(input("Ingrese un número de 4 cifras: "))
+    capacidad_gb = float(input("Ingrese la capacidad del disco duro en gigabytes: "))
     
-    (1000 <= numero < 10000) or (_ for _ in ()).throw(ValueError("El número debe tener 4 cifras."))
-
-    mayor, menor = formar_mayor_numero(numero)
-    print(f"El mayor número posible de dos cifras es: {mayor}")
-    print(f"El menor número posible de dos cifras es: {menor}")
+    (capacidad_gb < 0) and (_ for _ in ()).throw(ValueError("La capacidad no puede ser negativa."))
+    
+    capacidad_mb, capacidad_kb, capacidad_bytes = convertir_disco_duro(capacidad_gb)
+    
+    print(f"Capacidad en megabytes: {capacidad_mb:.2f} MB")
+    print(f"Capacidad en kilobytes: {capacidad_kb:.2f} KB")
+    print(f"Capacidad en bytes: {capacidad_bytes:.2f} Bytes")
 
 except ValueError as e:
     print(f"Entrada no válida: {e}")
+
