@@ -1,17 +1,9 @@
-import math
+import os
+os.system("cls")
 
-def calcular_hipotenusa(cateto_a, cateto_b):
-    return math.sqrt(cateto_a**2 + cateto_b**2)
+cateto_a = int(input("Ingrese la longitud del cateto A (entero): "))
+cateto_b = int(input("Ingrese la longitud del cateto B (entero): "))
 
-try:
-    cateto_a = float(input("Ingrese la longitud del primer cateto: "))
-    cateto_b = float(input("Ingrese la longitud del segundo cateto: "))
-    
-    (cateto_a < 0) and (_ for _ in ()).throw(ValueError("La longitud del cateto A no puede ser negativa."))
-    (cateto_b < 0) and (_ for _ in ()).throw(ValueError("La longitud del cateto B no puede ser negativa."))
-    
-    hipotenusa = calcular_hipotenusa(cateto_a, cateto_b)
-    print(f"La hipotenusa del triángulo es: {hipotenusa:.2f}")
+hipotenusa = (cateto_a**2 + cateto_b**2) ** 0.5
 
-except ValueError as e:
-    print(f"Entrada no válida: {e}")
+print("La hipotenusa del triángulo es:", int(hipotenusa))
