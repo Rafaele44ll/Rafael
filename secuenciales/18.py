@@ -2,7 +2,7 @@ import os
 os.system("cls")
 
 unidades = int( input("Unidades :") )
-precio = float( input("Precio :") )
+precio = int( input("Precio :") )
 
 compra = unidades * precio
 descuento_1 = 0.15 * compra
