@@ -1,55 +1,49 @@
 import os
 os.system("cls")
 
-def es_bisiesto(año):
-    return (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0)
+votos_pamela = int(input("Ingrese los votos de Pamela: "))
+votos_carol = int(input("Ingrese los votos de Carol: "))
+votos_fanny = int(input("Ingrese los votos de Fanny: "))
 
-mes = int(input("Ingrese el número del mes (1-12): "))
-año = int(input("Ingrese el año: "))
+total_votos = votos_pamela + votos_carol + votos_fanny
 
-nombre_mes = ""
-dias = 0
+votos_necesarios = (total_votos // 2) + 1
 
-if mes == 1:
-    nombre_mes = "Enero"
-    dias = 31
-elif mes == 2:
-    nombre_mes = "Febrero"
-    dias = 29 if es_bisiesto(año) else 28
-elif mes == 3:
-    nombre_mes = "Marzo"
-    dias = 31
-elif mes == 4:
-    nombre_mes = "Abril"
-    dias = 30
-elif mes == 5:
-    nombre_mes = "Mayo"
-    dias = 31
-elif mes == 6:
-    nombre_mes = "Junio"
-    dias = 30
-elif mes == 7:
-    nombre_mes = "Julio"
-    dias = 31
-elif mes == 8:
-    nombre_mes = "Agosto"
-    dias = 31
-elif mes == 9:
-    nombre_mes = "Septiembre"
-    dias = 30
-elif mes == 10:
-    nombre_mes = "Octubre"
-    dias = 31
-elif mes == 11:
-    nombre_mes = "Noviembre"
-    dias = 30
-elif mes == 12:
-    nombre_mes = "Diciembre"
-    dias = 31
+if votos_pamela >= votos_necesarios:
+    print("La ganadora es: Pamela")
+elif votos_carol >= votos_necesarios:
+    print("La ganadora es: Carol")
+elif votos_fanny >= votos_necesarios:
+    print("La ganadora es: Fanny")
 else:
-    nombre_mes = "Mes no válido"
-
-if dias > 0:
-    print(f"El mes de {nombre_mes} tiene {dias} días.")
-else:
-    print(nombre_mes)
+   
+    if (votos_pamela == votos_carol == votos_fanny):
+        print("La elección se anula por empate.")
+    elif (votos_pamela == votos_carol) or (votos_carol == votos_fanny) or (votos_fanny == votos_pamela):
+        print("La elección se anula por empate en el segundo puesto.")
+    else:
+        
+        if votos_pamela > votos_carol and votos_pamela > votos_fanny:
+            print("1° puesto: Pamela")
+            if votos_carol > votos_fanny:
+                print("2° puesto: Carol")
+                print("3° puesto: Fanny")
+            else:
+                print("2° puesto: Fanny")
+                print("3° puesto: Carol")
+        elif votos_carol > votos_pamela and votos_carol > votos_fanny:
+            print("1° puesto: Carol")
+            if votos_pamela > votos_fanny:
+                print("2° puesto: Pamela")
+                print("3° puesto: Fanny")
+            else:
+                print("2° puesto: Fanny")
+                print("3° puesto: Pamela")
+        else:
+            print("1° puesto: Fanny")
+            if votos_pamela > votos_carol:
+                print("2° puesto: Pamela")
+                print("3° puesto: Carol")
+            else:
+                print("2° puesto: Carol")
+                print("3° puesto: Pamela")
