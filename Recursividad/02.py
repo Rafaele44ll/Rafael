@@ -1,9 +1,6 @@
 import os
 os.system("cls")
 
-import os
-os.system("cls")
-
 def mcd(a, b):
     if b == 0:
         return a
