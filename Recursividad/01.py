@@ -1,9 +1,6 @@
 import os
 os.system("cls")
 
-import os
-os.system("cls")
-
 def invertir_cadena(cadena):
     if len(cadena) <= 1:
         return cadena
